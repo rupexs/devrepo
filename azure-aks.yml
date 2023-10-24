@@ -16,7 +16,7 @@ spec:
       - name: my-first-container
         image: proacr.azurecr.io/rupexs/devrepo:latest#{Build.BuildId}#
         ports:  
-        - containerPort: 5000
+        - containerPort: 80
 # service type loadbalancer       
 ---
 apiVersion: v1
