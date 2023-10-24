@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: htmlappaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: htmlappaks
+  template:
+    metadata:
+      labels:
+        app: htmlappaks 
+    spec:
+      containers:
+        - name: htmlappaks 
+          image: proacr.azurecr.io/htmlappaks
+          ports:
+          - containerPort: 80
